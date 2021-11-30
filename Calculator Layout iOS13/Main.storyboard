@@ -19,13 +19,24 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="rl8-KH-HiD" userLabel="Calculator">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 0  " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gC2-i9-XzD" userLabel="0">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q4L-tG-mk7">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="135.5"/>
-                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="20"/>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 0  " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gC2-i9-XzD" userLabel="0">
+                                                <rect key="frame" x="20" y="38" width="374" height="60"/>
+                                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="20"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="gC2-i9-XzD" secondAttribute="trailing" constant="20" id="2iA-qU-rcs"/>
+                                            <constraint firstItem="gC2-i9-XzD" firstAttribute="centerX" secondItem="Q4L-tG-mk7" secondAttribute="centerX" id="ikM-2F-jre"/>
+                                            <constraint firstItem="gC2-i9-XzD" firstAttribute="leading" secondItem="Q4L-tG-mk7" secondAttribute="leading" constant="20" id="o3C-Hd-CCQ"/>
+                                            <constraint firstItem="gC2-i9-XzD" firstAttribute="centerY" secondItem="Q4L-tG-mk7" secondAttribute="centerY" id="x7c-9d-3AZ"/>
+                                        </constraints>
+                                    </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="tW6-fx-ps6" userLabel="Top Row">
                                         <rect key="frame" x="0.0" y="136.5" width="414" height="135.5"/>
                                         <subviews>
@@ -212,7 +223,7 @@
                                 <constraints>
                                     <constraint firstItem="bNU-8c-i1c" firstAttribute="leading" secondItem="rl8-KH-HiD" secondAttribute="leading" id="BD1-Yx-308"/>
                                     <constraint firstItem="bNU-8c-i1c" firstAttribute="leading" secondItem="rl8-KH-HiD" secondAttribute="leading" id="DAL-Ty-jRx"/>
-                                    <constraint firstItem="gC2-i9-XzD" firstAttribute="top" secondItem="rl8-KH-HiD" secondAttribute="top" id="MPT-oh-TMC"/>
+                                    <constraint firstAttribute="trailing" secondItem="Q4L-tG-mk7" secondAttribute="trailing" id="EZr-cX-DsW"/>
                                     <constraint firstAttribute="trailing" secondItem="bNU-8c-i1c" secondAttribute="trailing" id="S2K-mT-6Mf"/>
                                     <constraint firstAttribute="bottom" secondItem="dYX-Va-1CV" secondAttribute="bottom" id="UIO-Jp-1Z0"/>
                                     <constraint firstItem="1D8-v8-Btc" firstAttribute="leading" secondItem="rl8-KH-HiD" secondAttribute="leading" id="Ufd-AJ-eh0"/>
@@ -222,9 +233,7 @@
                                     <constraint firstItem="tW6-fx-ps6" firstAttribute="leading" secondItem="rl8-KH-HiD" secondAttribute="leading" id="fj5-ai-Tte"/>
                                     <constraint firstAttribute="trailing" secondItem="bNU-8c-i1c" secondAttribute="trailing" id="fjd-on-cdc"/>
                                     <constraint firstAttribute="trailing" secondItem="dYX-Va-1CV" secondAttribute="trailing" id="grl-XL-MMw"/>
-                                    <constraint firstItem="gC2-i9-XzD" firstAttribute="leading" secondItem="rl8-KH-HiD" secondAttribute="leading" id="hAx-DU-vLu"/>
                                     <constraint firstAttribute="trailing" secondItem="tW6-fx-ps6" secondAttribute="trailing" id="nZS-b0-InU"/>
-                                    <constraint firstAttribute="trailing" secondItem="gC2-i9-XzD" secondAttribute="trailing" id="qe5-8m-Sex"/>
                                     <constraint firstItem="fbY-v5-JSa" firstAttribute="leading" secondItem="rl8-KH-HiD" secondAttribute="leading" id="uBX-zE-re0"/>
                                 </constraints>
                             </stackView>
